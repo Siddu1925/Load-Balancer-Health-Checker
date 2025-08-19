@@ -25,8 +25,8 @@ Code:
 import boto3
 
 def lambda_handler(event, context):
-    elb_name = 'your-elb-name'  # Replace with your ELB name
-    sns_topic_arn = 'arn:aws:sns:region:account-id:your-topic'  # Replace with your SNS topic ARN
+    elb_name = 'tm-app-backend-lb'  # Replace with your ELB name
+    sns_topic_arn = 'arn:aws:sns:ca-central-1:818254073291:ELBHealthAlerts  # Replace with your SNS topic ARN
 
     elb = boto3.client('elb')
     sns = boto3.client('sns')
